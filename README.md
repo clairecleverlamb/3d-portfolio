@@ -21,7 +21,7 @@ This project is a tribute — to the passion that drives me, the people who’ve
 
 As I continue to evolve in this ever-changing field, I hope this portfolio will always remind me of where I started — and inspire others to keep building, keep learning, and stay curious.
 
-Thank you for being part of this journey.
+Thank you for being part of this journey. ♥️
 
 
 ## Extra Resources
