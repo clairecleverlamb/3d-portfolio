@@ -1,3 +1,5 @@
+
+
 import Contact from "./Contact";
 import Experience from "./Experience";
 import Hero from "./Hero";
@@ -10,4 +12,6 @@ import SpacemanCanvas from "./Spaceman";
 export {
     CanvasLoader, Contact, Experience, Hero, Navbar, Portfolio, Position, SpacemanCanvas
 };
+
+// for centralized exports
 
