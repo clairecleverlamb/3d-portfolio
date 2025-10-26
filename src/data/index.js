@@ -7,7 +7,11 @@ import {
 export const navLinks = [
   {
     id: "hero",
-    title: "Hero",
+    title: "Home",
+  },
+  {
+    id: "about",
+    title: "About",
   },
   {
     id: "portfolio",
@@ -16,6 +20,10 @@ export const navLinks = [
   {
     id: "experience",
     title: "Experience",
+  },
+  {
+    id: "skills",
+    title: "Skills",
   },
   {
     id: "contact",

@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,9 +9,98 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Enhanced text shadows for better visibility */
+.text-shadow-lg {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+.text-shadow-xl {
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.4), 0 0 50px rgba(255, 255, 255, 0.3), 0 0 75px rgba(255, 255, 255, 0.2);
+}
+
+/* Clean streaky glow effect */
+.streaky-glow {
+  position: relative;
+  font-family: inherit;
+  color: transparent;
+  background: linear-gradient(90deg, #fff, rgba(0, 212, 255, 0.8), #ff6b6b, #fff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: glow 4s infinite alternate, streaky-move 4s linear infinite;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Subtle gradient text animation */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #00D4FF, #4ECDC4, #45b7d1, #96ceb4);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Clean glow animation */
+@keyframes clean-glow {
+  0%, 100% { 
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 40px rgba(0, 212, 255, 0.2);
+  }
+  50% { 
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(0, 212, 255, 0.3);
+  }
+}
+
+.clean-glow {
+  animation: clean-glow 3s ease-in-out infinite alternate;
+}
+
+/* Enhanced title effects */
+@keyframes title-glow {
+  0%, 100% { 
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(147, 51, 234, 0.3), 0 0 60px rgba(236, 72, 153, 0.2);
+  }
+  50% { 
+    text-shadow: 0 0 30px rgba(59, 130, 246, 0.7), 0 0 60px rgba(147, 51, 234, 0.5), 0 0 90px rgba(236, 72, 153, 0.3);
+  }
+}
+
+.title-glow {
+  animation: title-glow 2.5s ease-in-out infinite alternate;
+}
+
+/* Content Creator glow */
+@keyframes creator-glow {
+  0%, 100% { 
+    text-shadow: 0 0 20px rgba(251, 191, 36, 0.5), 0 0 40px rgba(249, 115, 22, 0.3), 0 0 60px rgba(239, 68, 68, 0.2);
+  }
+  50% { 
+    text-shadow: 0 0 30px rgba(251, 191, 36, 0.7), 0 0 60px rgba(249, 115, 22, 0.5), 0 0 90px rgba(239, 68, 68, 0.3);
+  }
+}
+
+.creator-glow {
+  animation: creator-glow 2.5s ease-in-out infinite alternate;
 }
 
 .hash-span {
