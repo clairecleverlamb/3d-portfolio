@@ -2,7 +2,7 @@
 
 <!-- ![3D Parallax Developer Portfolio Thumbnail](https://i.ibb.co/86NQD5c/thumbnail-3d-portfolio-smaller.jpg) -->
 
-## Introduction
+## Intro
 This portfolio is more than just a showcase of my work — it's a living journal of my journey as a software developer. Built with care and curiosity, it represents the milestones, late-night coding sessions, breakthroughs, and lessons learned that have shaped me into the developer I am today.
 
 From the ground up, I constructed this portfolio using:
