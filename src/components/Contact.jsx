@@ -76,21 +76,21 @@ const Contact = () => {
           <p className={`${styles.sectionSubText} text-center mt-4`}>Let's work together</p>
         </motion.div>
 
-        <div className="mt-20 flex flex-col lg:flex-row gap-16 items-start">
+        <div className="mt-20 flex flex-col lg:flex-row gap-16 items-stretch">
           {/* Contact Info */}
           <motion.div
             variants={fadeIn("left", "spring", 0.2, 1)}
-            className="flex-1"
+            className="flex-1 flex"
           >
-            <div className="bg-tertiary/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-800">
+            <div className="bg-tertiary/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 w-full flex flex-col h-full">
               <h3 className="text-light text-2xl font-bold mb-6">Let's Connect</h3>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
                 I'm always interested in new opportunities and exciting projects. 
                 Whether you have a question, want to collaborate, or just want to say hi, 
-                I'd love to hear from you!
+                I'd love to hear from you! Let's chat!
               </p>
               
-              <div className="space-y-6">
+              <div className="space-y-6 flex-1">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-quaternary/20 rounded-xl flex items-center justify-center">
                     <svg className="w-6 h-6 text-quaternary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -162,10 +162,10 @@ const Contact = () => {
           {/* Contact Form */}
           <motion.div
             variants={fadeIn("right", "spring", 0.2, 1)}
-            className="flex-1"
+            className="flex-1 flex"
           >
-            <div className="bg-tertiary/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-800">
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="bg-tertiary/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 w-full flex flex-col h-full">
+              <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
                 <div>
                   <label className="block text-light font-semibold mb-2">Full Name</label>
                   <input

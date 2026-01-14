@@ -113,8 +113,7 @@ const Skills = () => {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              "Project Management", "Team Leadership", "Technical Writing", 
-              "Public Speaking", "Mentoring", "Open Source", "Community Building", "Strategic Planning"
+              "Community Building", "Strategic Planning", "Graphic Design", "Open Source"
             ].map((skill, index) => (
               <motion.div
                 key={skill}
@@ -127,24 +126,6 @@ const Skills = () => {
               </motion.div>
             ))}
           </div>
-        </motion.div>
-
-        {/* Stats Section */}
-        <motion.div
-          variants={fadeIn("up", "spring", 0.8, 0.75)}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
-        >
-          {[
-            { label: "Years Coding", value: "8+" },
-            { label: "Projects Completed", value: "100+" },
-            { label: "Technologies", value: "25+" },
-            { label: "Happy Clients", value: "50+" }
-          ].map((stat, index) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-quaternary text-4xl font-bold mb-2">{stat.value}</div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
-            </div>
-          ))}
         </motion.div>
       </div>
     </div>
