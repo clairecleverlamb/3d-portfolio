@@ -17,10 +17,13 @@ const Spaceman = ({ scale, position, rotationX, rotationY, mousePosition, scroll
     }
   }, [actions]);
 
-  // Completely redesigned rotation system
+  // Completely redesigned rotation system with enhanced mouse tracking
+  const targetMouseRotation = useRef({ x: 0, y: 0, z: 0 });
+  
   useFrame((state) => {
     if (spacemanRef.current) {
       const time = state.clock.elapsedTime;
+      const delta = state.clock.getDelta();
       
       // Enhanced floating animation
       spacemanRef.current.position.y = position[1] + Math.sin(time * 0.8) * 0.15;
@@ -31,19 +34,36 @@ const Spaceman = ({ scale, position, rotationX, rotationY, mousePosition, scroll
       const scrollRotationY = rotationY * 3; // Much more dramatic
       const scrollRotationZ = scrollProgress * Math.PI * 2; // Full rotation based on scroll
       
-      // Enhanced mouse interaction
-      const mouseRotationX = mousePosition.y * 0.5; // Increased sensitivity
-      const mouseRotationY = mousePosition.x * 0.5; // Increased sensitivity
+      // Enhanced mouse interaction with much higher sensitivity and smooth interpolation
+      // Mouse position ranges from -1 to 1, multiply by larger values for more dramatic rotation
+      targetMouseRotation.current.x = mousePosition.y * 1.5; // Much more responsive on Y axis
+      targetMouseRotation.current.y = mousePosition.x * 1.5; // Much more responsive on X axis
+      targetMouseRotation.current.z = (mousePosition.x + mousePosition.y) * 0.3; // Z axis also responds to mouse
       
-      // Continuous automatic rotation
-      const autoRotationX = Math.sin(time * 0.2) * 0.1;
-      const autoRotationY = time * 0.1; // Continuous slow rotation
-      const autoRotationZ = Math.cos(time * 0.15) * 0.05;
+      // Smooth interpolation (lerp) for smooth mouse following
+      const lerpFactor = 0.1; // Adjust this (0-1) - lower = smoother but slower, higher = faster but less smooth
+      const currentMouseX = spacemanRef.current.userData.mouseRotX || 0;
+      const currentMouseY = spacemanRef.current.userData.mouseRotY || 0;
+      const currentMouseZ = spacemanRef.current.userData.mouseRotZ || 0;
       
-      // Combine all rotations
-      spacemanRef.current.rotation.x = scrollRotationX + mouseRotationX + autoRotationX;
-      spacemanRef.current.rotation.y = 2.2 + scrollRotationY + mouseRotationY + autoRotationY;
-      spacemanRef.current.rotation.z = scrollRotationZ + autoRotationZ;
+      const smoothMouseX = currentMouseX + (targetMouseRotation.current.x - currentMouseX) * lerpFactor;
+      const smoothMouseY = currentMouseY + (targetMouseRotation.current.y - currentMouseY) * lerpFactor;
+      const smoothMouseZ = currentMouseZ + (targetMouseRotation.current.z - currentMouseZ) * lerpFactor;
+      
+      // Store for next frame
+      spacemanRef.current.userData.mouseRotX = smoothMouseX;
+      spacemanRef.current.userData.mouseRotY = smoothMouseY;
+      spacemanRef.current.userData.mouseRotZ = smoothMouseZ;
+      
+      // Continuous automatic rotation (reduced to make mouse more prominent)
+      const autoRotationX = Math.sin(time * 0.2) * 0.05; // Reduced
+      const autoRotationY = time * 0.05; // Reduced
+      const autoRotationZ = Math.cos(time * 0.15) * 0.02; // Reduced
+      
+      // Combine all rotations - mouse rotation is now more prominent
+      spacemanRef.current.rotation.x = scrollRotationX + smoothMouseX + autoRotationX;
+      spacemanRef.current.rotation.y = 2.2 + scrollRotationY + smoothMouseY + autoRotationY;
+      spacemanRef.current.rotation.z = scrollRotationZ + smoothMouseZ + autoRotationZ;
       
       // Dynamic scaling based on scroll and time
       const baseScale = scale[0];

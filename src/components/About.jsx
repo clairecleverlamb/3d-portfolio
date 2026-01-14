@@ -25,15 +25,15 @@ const About = () => {
                   Passionate Developer & Content Creator
                 </h3>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  I'm Claire Chen, a passionate software developer and YouTube content creator 
-                  with over 500,000 subscribers. I specialize in creating engaging educational 
-                  content and building innovative web applications that solve real-world problems.
+                  Hi, I'm Claire Chen — a software developer and content creator who turns complex 
+                  systems into clean code, clear explanations, and fewer "why is this broken?" moments. 
+                  I build scalable web applications and educational content designed to help people 
+                  learn and build with confidence.
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  With a Computer Science background from ODU and experience working with 
-                  Fortune 500 companies, I bring both technical expertise and creative vision 
-                  to every project. My videos have garnered over 30 million views, helping 
-                  developers worldwide learn and grow.
+                  Backed by a UC Berkeley CS background and experience with Fortune 500 companies, 
+                  I combine engineering rigor with creativity and empathy, but my real goal is simple: 
+                  build software that works well, makes sense, and doesn't make people sigh loudly at their screen.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <span className="px-4 py-2 bg-quaternary/20 text-quaternary rounded-full text-sm font-medium">
@@ -59,12 +59,12 @@ const About = () => {
           >
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-tertiary/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 hover:border-quaternary/50 transition-all duration-300">
-                <div className="text-quaternary text-3xl font-bold mb-2">500K+</div>
-                <div className="text-gray-300 text-sm">YouTube Subscribers</div>
+                <div className="text-quaternary text-3xl font-bold mb-2">5+</div>
+                <div className="text-gray-300 text-sm">Fortune 500 Companies</div>
               </div>
               <div className="bg-tertiary/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 hover:border-quaternary/50 transition-all duration-300">
-                <div className="text-accent text-3xl font-bold mb-2">30M+</div>
-                <div className="text-gray-300 text-sm">Total Views</div>
+                <div className="text-accent text-3xl font-bold mb-2">100+</div>
+                <div className="text-gray-300 text-sm">Design Projects</div>
               </div>
               <div className="bg-tertiary/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 hover:border-quaternary/50 transition-all duration-300">
                 <div className="text-success text-3xl font-bold mb-2">5+</div>
