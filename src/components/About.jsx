@@ -127,7 +127,7 @@ const About = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h4 className="text-light text-xl font-bold mb-4">🧪 Test Automation</h4>
+              <h4 className="text-light text-xl font-bold mb-4">Test Automation</h4>
               <p className="text-gray-300 leading-relaxed">
                 Designing and maintaining automated testing systems that improve reliability, catch issues early, and make engineering teams more confident shipping software.
               </p>
@@ -139,7 +139,7 @@ const About = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h4 className="text-light text-xl font-bold mb-4">🤝 Mentorship & Coaching</h4>
+              <h4 className="text-light text-xl font-bold mb-4">Mentorship & Coaching</h4>
               <p className="text-gray-300 leading-relaxed">
                 Mentoring youth in game design and life skills, helping them build confidence, think creatively, and grow through hands-on projects and supportive guidance.
               </p>
@@ -151,7 +151,7 @@ const About = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
                 </svg>
               </div>
-              <h4 className="text-light text-xl font-bold mb-4">🎵 Music & Learning Tools</h4>
+              <h4 className="text-light text-xl font-bold mb-4">Music & Learning Tools</h4>
               <p className="text-gray-300 leading-relaxed">
                 Building software projects that help people learn music and instruments through interactive, accessible, and engaging experiences.
               </p>

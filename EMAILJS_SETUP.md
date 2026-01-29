@@ -190,3 +190,5 @@ The object passed to `emailjs.send()` becomes available in your template as:
 - **Set up email notifications** in EmailJS dashboard for failed sends
 - **Use EmailJS webhooks** for advanced integrations (optional)
 
+
+

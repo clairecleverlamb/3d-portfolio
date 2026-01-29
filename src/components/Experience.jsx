@@ -10,28 +10,28 @@ const ExperienceCard = ({ experience, onClick, isActive, isMobile }) => {
   return (
     <div
       onClick={onClick}
-      className={`cursor-pointer p-6 max-w-xl relative rounded-xl transition-all duration-300 ${
+      className={`cursor-pointer p-5 lg:p-6 relative rounded-xl transition-all duration-300 ${
         isActive || isMobile 
           ? "bg-tertiary/50 border border-quaternary/50" 
           : "hover:bg-tertiary/30 border border-transparent"
       }`}
     >
       {(isActive || isMobile) && (
-        <div className="absolute left-0 top-0 bottom-0 w-1 bg-quaternary rounded-r-full my-6 sm:block hidden"></div>
+        <div className="absolute left-0 top-0 bottom-0 w-1 bg-quaternary rounded-r-full my-5 lg:my-6 sm:block hidden"></div>
       )}
       <h3
-        className={`text-xl lg:text-2xl xl:text-3xl font-bold sm:pl-8 transition-colors duration-300 ${
+        className={`text-lg sm:text-xl lg:text-2xl font-bold sm:pl-6 lg:pl-8 transition-colors duration-300 ${
           isActive || isMobile ? "text-quaternary" : "text-gray-400 hover:text-light"
         }`}
       >
         {experience.title}
       </h3>
       <p
-        className={`text-md lg:text-lg xl:text-xl sm:font-medium pt-2 sm:pl-8 transition-colors duration-300 ${
+        className={`text-sm lg:text-base font-medium pt-1.5 sm:pl-6 lg:pl-8 transition-colors duration-300 text-gray-400 ${
           isActive || isMobile ? "text-light" : "text-gray-500"
         }`}
       >
-        {experience.company_name} | {experience.date}
+        {experience.subtitle}
       </p>
     </div>
   );
@@ -39,15 +39,15 @@ const ExperienceCard = ({ experience, onClick, isActive, isMobile }) => {
 
 const ExperienceDetails = ({ experience }) => {
   return (
-    <div className="mt-5">
-      <div className="bg-tertiary/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-800">
-        <ul className="list-none space-y-6">
+    <div className="lg:mt-0 flex items-start">
+      <div className="bg-tertiary/30 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-gray-800 w-full max-w-2xl">
+        <ul className="list-none space-y-5">
           {experience.details.map((detail, index) => (
             <li
               key={`experience-detail-${index}`}
-              className="text-gray-300 font-medium text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed flex items-start"
+              className="text-gray-300 font-medium text-sm sm:text-base lg:text-lg leading-relaxed flex items-start"
             >
-              <div className="w-2 h-2 bg-quaternary rounded-full mt-3 mr-4 flex-shrink-0"></div>
+              <div className="w-2 h-2 bg-quaternary rounded-full mt-2.5 mr-3 flex-shrink-0"></div>
               <span dangerouslySetInnerHTML={{ __html: detail }} />
             </li>
           ))}
@@ -84,20 +84,22 @@ const Experience = () => {
           <p className={`${styles.sectionSubText} text-center mt-4`}>My Professional Journey</p>
         </motion.div>
 
-        <div className="relative mt-20 flex flex-col lg:flex-row gap-12">
-          <div className="flex flex-col lg:w-1/3">
-            {experiences.map((experience, index) => (
-              <ExperienceCard
-                key={`experience-${index}`}
-                experience={experience}
-                onClick={() => setSelectedJob(experience)}
-                isActive={selectedJob === experience}
-                isMobile={isMobile}
-              />
-            ))}
+        <div className="relative mt-20 flex flex-col lg:flex-row gap-8 lg:gap-12">
+          <div className="flex flex-col lg:w-[42%] lg:min-w-0 shrink-0">
+            <div className="flex flex-col gap-3">
+              {experiences.map((experience, index) => (
+                <ExperienceCard
+                  key={`experience-${index}`}
+                  experience={experience}
+                  onClick={() => setSelectedJob(experience)}
+                  isActive={selectedJob === experience}
+                  isMobile={isMobile}
+                />
+              ))}
+            </div>
           </div>
 
-          <div className="flex-1 lg:block hidden">
+          <div className="flex-1 lg:flex lg:items-start lg:justify-start min-w-0 lg:block hidden">
             <ExperienceDetails experience={selectedJob} />
           </div>
         </div>
