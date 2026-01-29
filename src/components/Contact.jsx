@@ -121,17 +121,6 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-success/20 rounded-xl flex items-center justify-center">
-                    <svg className="w-6 h-6 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-light font-semibold">Response Time</div>
-                    <div className="text-gray-400">Within 24 hours</div>
-                  </div>
-                </div>
               </div>
 
               <div className="mt-8 flex gap-4">
