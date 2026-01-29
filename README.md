@@ -17,9 +17,9 @@ From the ground up, I constructed this portfolio using:
 
 Each technology was chosen not just for functionality, but for how it helped me explore new concepts, push creative boundaries, and challenge myself to grow.
 
-This project is a tribute — to the passion that drives me, the people who’ve mentored and believed in me, and the moments when I almost gave up but didn’t. I'm deeply grateful for the support I've received, whether in the form of feedback, encouragement, or a simple nudge in the right direction.
+This project is a tribute, to the passion that drives me, the people who’ve mentored and believed in me, and the moments when I almost gave up but didn’t. I'm deeply grateful for the support I've received, whether in the form of feedback, encouragement, or a simple nudge in the right direction.
 
-As I continue to evolve in this ever-changing field, I hope this portfolio will always remind me of where I started — and inspire others to keep building, keep learning, and stay curious.
+As I continue to evolve in this ever-changing field, I hope this portfolio will always remind me of where I started, and inspire others to keep building, keep learning, and stay curious.
 
 Thank you for being part of this journey. ♥️
 
