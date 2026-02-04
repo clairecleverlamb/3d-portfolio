@@ -113,16 +113,30 @@ const Skills = () => {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              "Community Building", "Strategic Planning", "Graphic Design", "Open Source"
+              { name: "Community Building", href: "https://www.berkeleyisf.org/" },
+              { name: "Strategic Planning", href: null },
+              { name: "Graphic Design", href: null },
+              { name: "Open Source", href: null },
             ].map((skill, index) => (
               <motion.div
-                key={skill}
+                key={skill.name}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-tertiary/20 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-800 hover:border-quaternary/50 transition-all duration-300"
               >
-                <div className="text-quaternary text-sm font-semibold">{skill}</div>
+                {skill.href ? (
+                  <a
+                    href={skill.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-quaternary text-sm font-semibold hover:text-quaternary/90 transition-colors"
+                  >
+                    {skill.name}
+                  </a>
+                ) : (
+                  <div className="text-quaternary text-sm font-semibold">{skill.name}</div>
+                )}
               </motion.div>
             ))}
           </div>

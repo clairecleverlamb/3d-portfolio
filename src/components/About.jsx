@@ -22,7 +22,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-quaternary to-accent opacity-20 rounded-3xl blur-3xl"></div>
               <div className="relative bg-tertiary/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-800">
                 <h3 className="text-light text-2xl font-bold mb-6">
-                  Passionate Developer & Content Creator
+                  Passionate Developer & Graphic Designer
                 </h3>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
                   Hi, I'm Claire 👋 a software engineer who values growth, curiosity, and community as much as clean code! 
