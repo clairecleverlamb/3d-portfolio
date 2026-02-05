@@ -1,6 +1,7 @@
 
 
 import About from "./About";
+import AstroCorgiCanvas from "./AstroCorgiCanvas";
 import Contact from "./Contact";
 import Experience from "./Experience";
 import Hero from "./Hero";
@@ -12,7 +13,7 @@ import Skills from "./Skills";
 import SpacemanCanvas from "./Spaceman";
 
 export {
-    About, CanvasLoader, Contact, Experience, Hero, Navbar, Portfolio, Position, Skills, SpacemanCanvas
+    About, AstroCorgiCanvas, CanvasLoader, Contact, Experience, Hero, Navbar, Portfolio, Position, Skills, SpacemanCanvas
 };
 
 // for centralized exports

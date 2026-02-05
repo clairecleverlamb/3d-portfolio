@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { AstroCorgiCanvas } from ".";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -25,14 +26,14 @@ const About = () => {
                   Passionate Developer & Graphic Designer
                 </h3>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  Hi, I'm Claire 👋 a software engineer who values growth, curiosity, and community as much as clean code! 
-                  Outside of work, I'm a basketball player, a competitive swimmer at heart, a dog lover, and a coffee 
-                  enthusiast who finds joy in being outdoors and connecting with others!
+                  Hi, I'm Claire 👋 a software engineer who values growth, curiosity, and community as much as clever code! 
+                  Outside of work, I'm a basketball player, a competitive swimmer at heart forever, a dog lover, and a coffee 
+                  enthusiast who finds joy in being outdoors or in the nature, & connecting with others :)
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
                   My work focuses on building scalable, thoughtful software and educational tools that make complex ideas 
-                  easier to understand. Shaped by my experiences in computer science and real-world engineering environments, 
-                  I care about clarity in code, in communication, and in how technology shows up in people's lives.
+                  easier to understand. Shaped by my experiences in computer science and digital art, as well as real-world engineering environments, 
+                  I care about clarity in code, in aesthetics, and in how technology shows up in people's lives!
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <span className="px-4 py-2 bg-quaternary/20 text-quaternary rounded-full text-sm font-medium">
@@ -56,6 +57,10 @@ const About = () => {
             variants={fadeIn("left", "spring", 0.2, 1)}
             className="flex-1"
           >
+            {/* 3D Astro Corgi – running animation, same style as hero spaceman */}
+            <div className="flex justify-center" aria-hidden="true">
+              <AstroCorgiCanvas />
+            </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-tertiary/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 hover:border-quaternary/50 transition-all duration-300">
                 <div className="text-quaternary text-3xl font-bold mb-2">5+</div>
