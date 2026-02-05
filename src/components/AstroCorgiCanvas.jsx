@@ -13,7 +13,7 @@ const ArrowButton = ({ direction, onClick, "aria-label": ariaLabel, className = 
     type="button"
     onClick={onClick}
     aria-label={ariaLabel}
-    className={`absolute z-10 w-10 h-10 flex items-center justify-center rounded-full bg-tertiary/80 border border-gray-600 hover:border-quaternary hover:bg-quaternary/20 text-quaternary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-quaternary/50 ${className}`}
+    className={`absolute z-10 p-2 flex items-center justify-center text-gray-500 hover:text-quaternary transition-colors duration-200 focus:outline-none ${className}`}
   >
     {direction === "up" && (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
