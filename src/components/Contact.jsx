@@ -86,9 +86,7 @@ const Contact = () => {
             <div className="bg-tertiary/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 w-full flex flex-col h-full">
               <h3 className="text-light text-2xl font-bold mb-6">Let's Connect</h3>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                I'm always interested in new opportunities and exciting projects. 
-                Whether you have a question, want to collaborate, or just want to say hi, 
-                I'd love to hear from you! Let's chat!
+                I’m always drawn to new ideas, thoughtful work, and the people behind them. Whether you have a question, want to build something together, or just feel like grabbing a coffee and talking life, I’d love to connect! If you’re up for playing on the same team, on or off the clock, let’s chat :&gt;
               </p>
               
               <div className="space-y-6 flex-1">

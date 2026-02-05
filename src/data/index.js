@@ -1,6 +1,7 @@
 import {
   algorithms,
   devnotes,
+  spectrum,
 } from "../assets";
 
 export const navLinks = [
@@ -64,10 +65,12 @@ const experiences = [
 
 const portfolio = [
   {
-    name: "Dev Notes",
+    name: "Spectrum Dashboard",
     description:
-      "A newsletter with over 6,000 readers made for software developers to keep up with this rapidly evolving industry, with a sister platform in progress.",
-    image: devnotes,
+      "A real-time dashboard that monitors the full Adobe Express automation and CI/CD pipeline testing. Built with React and Adobe Spectrum, it visualizes test suites, memory and performance metrics, and queue status so engineering teams can ship with confidence.",
+    image: spectrum,
+    projectLink: "https://github.com/clairecleverlamb/spectrum_dashboard",
+    sourceCodeLink: "https://github.com/clairecleverlamb/spectrum_dashboard",
   },
   {
     name: "Visually Understanding Algorithms",

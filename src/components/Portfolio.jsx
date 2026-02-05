@@ -12,6 +12,8 @@ const ProjectCard = ({
   name,
   description,
   image,
+  projectLink,
+  sourceCodeLink,
 }) => {
   const controls = useAnimation();
   const { ref, inView } = useInView({
@@ -50,13 +52,27 @@ const ProjectCard = ({
         <p className='text-gray-300 text-lg lg:text-xl leading-relaxed mb-8'>
           {description}
         </p>
-        <div className="flex gap-4">
-          <button className="px-6 py-3 bg-quaternary text-primary font-semibold rounded-lg hover:bg-quaternary/90 transition-all duration-300">
-            View Project
-          </button>
-          <button className="px-6 py-3 border-2 border-quaternary text-quaternary font-semibold rounded-lg hover:bg-quaternary hover:text-primary transition-all duration-300">
-            View Code
-          </button>
+        <div className="flex gap-4 flex-wrap">
+          {projectLink && (
+            <a
+              href={projectLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-quaternary text-primary font-semibold rounded-lg hover:bg-quaternary/90 transition-all duration-300"
+            >
+              View Project
+            </a>
+          )}
+          {sourceCodeLink && (
+            <a
+              href={sourceCodeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border-2 border-quaternary text-quaternary font-semibold rounded-lg hover:bg-quaternary hover:text-primary transition-all duration-300"
+            >
+              View Code
+            </a>
+          )}
         </div>
       </div>
     </motion.div>
