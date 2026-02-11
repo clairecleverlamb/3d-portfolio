@@ -65,7 +65,7 @@ const Hero = ({ scrollContainer }) => {
           transition={{ duration: 1, delay: 0.6 }}
         >
           <div className='font-bold text-[20px] sm:text-[30px] md:text-[36px] 2xl:text-[46px] sm:leading-[40px] md:leading-[50px] 2xl:leading-[60px] streaky-glow max-w-sm 2xl:max-w-lg text-white text-left drop-shadow-xl'>
-            I love crafting <br/> captivating experiences for the digital world to savor.
+            I build at the intersection of design and engineering
           </div>
         </motion.div>
       </div>

@@ -7,38 +7,32 @@ import { fadeIn, textVariant } from "../utils/motion";
 const skills = [
   {
     name: "Frontend Development",
-    icon: "🎨",
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     color: "from-quaternary to-accent"
   },
   {
     name: "Backend Development",
-    icon: "⚙️",
     technologies: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB"],
     color: "from-accent to-success"
   },
   {
     name: "3D & Animation",
-    icon: "🚀",
     technologies: ["Three.js", "Blender", "GSAP", "WebGL", "React Three Fiber"],
     color: "from-success to-warning",
     href: "https://sketchfab.com/clairecleverlamb",
   },
   {
     name: "Content Creation",
-    icon: "📹",
     technologies: ["Video Editing", "Motion Graphics", "Adobe Creative Suite", "OBS Studio"],
     color: "from-warning to-quaternary"
   },
   {
     name: "AI & Machine Learning",
-    icon: "🤖",
     technologies: ["TensorFlow", "OpenAI API", "Computer Vision", "NLP", "Deep Learning"],
     color: "from-quaternary to-accent"
   },
   {
     name: "DevOps & Tools",
-    icon: "🔧",
     technologies: ["Docker", "AWS", "Git", "CI/CD", "Vercel", "Netlify"],
     color: "from-accent to-success"
   }
@@ -60,7 +54,6 @@ const SkillCard = ({ skill, index }) => {
         </span>
       )}
       <div className="relative z-10">
-        <div className="text-4xl mb-4">{skill.icon}</div>
         <h3 className="text-light text-xl font-bold mb-4 group-hover:text-quaternary transition-colors duration-300">
           {skill.name}
         </h3>
