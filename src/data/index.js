@@ -54,8 +54,9 @@ const experiences = [
   },
   {
     title: "Education",
-    subtitle: "UC Berkeley · CCSF · Adobe · HKU",
+    subtitle: "Georgia Tech · UC Berkeley · CCSF · Adobe · HKU",
     details: [
+      "<span style='color: white;'>Georgia Tech</span> — Computer Science (Architecture and Information System).",
       "Built a <span style='color: white;'>computer science foundation</span> in theory, computer architecture, and software engineering.",
       "Practical experience at <span style='color: white;'>Berkeley Engineering club</span> in robotic competition and system engineering.",
       "Produced high-quality educational and entertaining videos for students to learn about computer science",
