@@ -283,7 +283,7 @@ const GTMovieStore = () => {
               View Code
             </a>
             <a
-              href={LIVE_APP}
+              href={VIDEO_DEMO}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 border-2 border-quaternary text-quaternary font-semibold rounded-lg hover:bg-quaternary hover:text-primary transition-all duration-300"
