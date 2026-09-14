@@ -215,7 +215,7 @@ const GTMovieStore = () => {
 
       <header className="relative overflow-hidden border-b border-gray-800">
         <div className="absolute inset-0 bg-gradient-to-b from-quaternary/10 via-transparent to-primary" />
-        <div className="max-w-6xl mx-auto px-4 sm:px-8 pt-16 pb-14">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-8 pt-16 pb-14">
           <motion.p
             variants={textVariant()}
             initial="hidden"
@@ -264,7 +264,7 @@ const GTMovieStore = () => {
             variants={fadeIn("up", "spring", 0.25, 0.7)}
             initial="hidden"
             animate="show"
-            className="flex flex-wrap gap-4"
+            className="relative z-10 flex flex-wrap gap-4"
           >
             <a
               href={LIVE_APP}
@@ -283,7 +283,7 @@ const GTMovieStore = () => {
               View Code
             </a>
             <a
-              href={VIDEO_DEMO}
+              href={LIVE_APP}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 border-2 border-quaternary text-quaternary font-semibold rounded-lg hover:bg-quaternary hover:text-primary transition-all duration-300"
