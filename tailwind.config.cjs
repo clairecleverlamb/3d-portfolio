@@ -66,8 +66,10 @@ module.exports = {
         },
       },
       animation: {
-        textRotate1: 'textRotate1 2.4s infinite alternate',
-        textRotate2: 'textRotate2 2.4s infinite alternate',
+        textRotate1: 'textRotate1 9.6s ease-in-out infinite',
+        textRotate2: 'textRotate2 9.6s ease-in-out infinite',
+        textRotate3: 'textRotate3 9.6s ease-in-out infinite',
+        textRotate4: 'textRotate4 9.6s ease-in-out infinite',
         'fade-in': 'fade-in 0.6s ease-out',
         'slide-up': 'slide-up 0.8s ease-out',
         'float': 'float 3s ease-in-out infinite',

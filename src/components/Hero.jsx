@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { SpacemanCanvas } from ".";
 import Position from "./Position";
+import SpacemanCanvas from "./Spaceman";
 
 const Hero = ({ scrollContainer }) => {
   return (

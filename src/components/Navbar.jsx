@@ -142,7 +142,7 @@ const Navbar = ({ scrollContainer }) => {
                       transition={{ duration: 0.3 }}
                     />
                   )}
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <a href={`/#${nav.id}`}>{nav.title}</a>
                 </motion.li>
               );
             })}
@@ -191,7 +191,7 @@ const Navbar = ({ scrollContainer }) => {
                         setActive(nav.id);
                       }}
                     >
-                      <a href={`#${nav.id}`}>{nav.title}</a>
+                      <a href={`/#${nav.id}`}>{nav.title}</a>
                     </motion.li>
                   );
                 })}

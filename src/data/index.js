@@ -1,6 +1,6 @@
 import {
   algorithms,
-  devnotes,
+  gtmoviestore,
   spectrum,
 } from "../assets";
 
@@ -64,6 +64,16 @@ const experiences = [
 ];
 
 const portfolio = [
+  {
+    name: "GT Movie Store",
+    description:
+      "A Django movie store I designed and developed around 21 user stories — catalog search, accounts, cart checkout, reviews, and staff management — deployed so anyone can browse it from a desktop browser.",
+    image: gtmoviestore,
+    projectLink: "/portfolio/gt-movie-store",
+    liveLink: "https://clairecleverlamb.pythonanywhere.com/home/",
+    sourceCodeLink: "https://github.com/clairecleverlamb/moviesstore",
+    internal: true,
+  },
   {
     name: "Spectrum Dashboard",
     description:

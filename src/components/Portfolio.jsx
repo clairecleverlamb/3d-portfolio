@@ -1,11 +1,38 @@
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 
 import { portfolio } from "../data";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
+
+const ProjectButton = ({ href, to, children, variant = "primary" }) => {
+  const className =
+    variant === "primary"
+      ? "px-6 py-3 bg-quaternary text-primary font-semibold rounded-lg hover:bg-quaternary/90 transition-all duration-300"
+      : "px-6 py-3 border-2 border-quaternary text-quaternary font-semibold rounded-lg hover:bg-quaternary hover:text-primary transition-all duration-300";
+
+  if (to) {
+    return (
+      <Link to={to} className={className}>
+        {children}
+      </Link>
+    );
+  }
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+    >
+      {children}
+    </a>
+  );
+};
 
 const ProjectCard = ({
   index,
@@ -14,6 +41,8 @@ const ProjectCard = ({
   image,
   projectLink,
   sourceCodeLink,
+  liveLink,
+  internal,
 }) => {
   const controls = useAnimation();
   const { ref, inView } = useInView({
@@ -37,12 +66,22 @@ const ProjectCard = ({
       className={`w-full flex flex-col lg:flex-row ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 items-center group`}
     >
       <div className='relative w-full lg:w-3/5 overflow-hidden rounded-2xl'>
-        <div className="absolute inset-0 bg-gradient-to-r from-quaternary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-        <img
-          src={image}
-          alt='project_image'
-          className='w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105'
-        />
+        <div className="absolute inset-0 bg-gradient-to-r from-quaternary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+        {internal && projectLink ? (
+          <Link to={projectLink}>
+            <img
+              src={image}
+              alt={name}
+              className='w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105'
+            />
+          </Link>
+        ) : (
+          <img
+            src={image}
+            alt={name}
+            className='w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105'
+          />
+        )}
       </div>
 
       <div className={`w-full lg:w-2/5 flex flex-col justify-center ${isEven ? "text-left lg:text-left" : "text-left lg:text-right"}`}>
@@ -52,26 +91,24 @@ const ProjectCard = ({
         <p className='text-gray-300 text-lg lg:text-xl leading-relaxed mb-8'>
           {description}
         </p>
-        <div className="flex gap-4 flex-wrap">
+        <div className={`flex gap-4 flex-wrap ${isEven ? "justify-start" : "justify-start lg:justify-end"}`}>
           {projectLink && (
-            <a
-              href={projectLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-quaternary text-primary font-semibold rounded-lg hover:bg-quaternary/90 transition-all duration-300"
+            <ProjectButton
+              to={internal ? projectLink : undefined}
+              href={internal ? undefined : projectLink}
             >
               View Project
-            </a>
+            </ProjectButton>
+          )}
+          {liveLink && (
+            <ProjectButton href={liveLink} variant="secondary">
+              Live App
+            </ProjectButton>
           )}
           {sourceCodeLink && (
-            <a
-              href={sourceCodeLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border-2 border-quaternary text-quaternary font-semibold rounded-lg hover:bg-quaternary hover:text-primary transition-all duration-300"
-            >
+            <ProjectButton href={sourceCodeLink} variant="secondary">
               View Code
-            </a>
+            </ProjectButton>
           )}
         </div>
       </div>
